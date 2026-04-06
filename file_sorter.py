@@ -72,3 +72,7 @@ for file in files:
         if file.endswith(".log"):
                 os.rename(file, f"log_files/{file}")
                 print(f"Moved {file} to log_files/{file}")
+
+        if not file.endswith((".txt", ".jpg", ".png", ".pdf", ".docx", ".xlsx", ".pptx", ".mp3", ".wav", ".mp4", ".avi", ".zip", ".rar", ".py", ".css", ".html", ".js", ".json", ".xml", ".csv", ".log")):
+                os.rename(file, f"other_files/{file}")
+                print(f"Moved {file} to other_files/{file}")
